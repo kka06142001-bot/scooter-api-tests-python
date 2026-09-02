@@ -1,3 +1,5 @@
+BASE_URL = "https://471263f5-d6d9-45bb-9884-831840659d9d.serverhub.praktikum-services.ru"
+
 ORDER_DATA = {
     "firstName": "Kirill",
     "lastName": "Test",

@@ -1,15 +1,17 @@
 import requests
 
+from data import BASE_URL, ORDER_DATA
 
-def create_order(base_url, order_data):
+
+def create_order():
     return requests.post(
-        f"{base_url}/api/v1/orders",
-        json=order_data
+        f"{BASE_URL}/api/v1/orders",
+        json=ORDER_DATA
     )
 
 
-def get_order_by_track(base_url, track):
+def get_order_by_track(track):
     return requests.get(
-        f"{base_url}/api/v1/orders/track",
+        f"{BASE_URL}/api/v1/orders/track",
         params={"t": track}
     )
