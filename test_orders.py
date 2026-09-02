@@ -1,16 +1,17 @@
 import pytest
 
+from data import ORDER_DATA
 from helpers.api import create_order, get_order_by_track
 
 
 @pytest.fixture
 def order_track():
-    response = create_order()
+    response = create_order(ORDER_DATA)
     return response.json()["track"]
 
 
 def test_create_order():
-    response = create_order()
+    response = create_order(ORDER_DATA)
     assert response.status_code == 201
 
 

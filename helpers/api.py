@@ -1,12 +1,12 @@
 import requests
 
-from data import BASE_URL, ORDER_DATA
+from data import BASE_URL
 
 
-def create_order():
+def create_order(order_data):
     return requests.post(
         f"{BASE_URL}/api/v1/orders",
-        json=ORDER_DATA
+        json=order_data
     )
 
 
